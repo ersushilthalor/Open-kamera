@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Material 3 Camera Color System -->
+    <color name="camera_background">#000000</color>
+    <color name="camera_surface_dark">#121316</color>
+    <color name="camera_surface_card">#1E1F22</color>
+    <color name="camera_surface_elevated">#282A2D</color>
+    <color name="camera_surface_stroke">#3C4043</color>
+
+    <color name="camera_translucent_bar">#59000000</color>
+    <color name="camera_translucent_pill">#73000000</color>
+    <color name="camera_translucent_card">#CC1E1F22</color>
+    <color name="camera_control_button_bg">#40202124</color>
+    <color name="camera_control_button_stroke">#33FFFFFF</color>
+
+    <color name="m3_primary">#A8C7FA</color>
+    <color name="m3_on_primary">#062E6F</color>
+    <color name="m3_primary_container">#0842A0</color>
+    <color name="m3_on_primary_container">#D3E3FD</color>
+
+    <color name="m3_secondary">#7FCFFF</color>
+    <color name="m3_surface_variant">#444746</color>
+    <color name="m3_on_surface_variant">#C4C7C5</color>
+
+    <color name="m3_recording_red">#E53935</color>
+    <color name="m3_recording_red_dark">#B71C1C</color>
+    <color name="m3_level_green">#4CAF50</color>
+    <color name="m3_warning_yellow">#FDD835</color>
+
+    <color name="m3_text_high_emphasis">#FFFFFF</color>
+    <color name="m3_text_medium_emphasis">#C4C7C5</color>
+    <color name="m3_text_disabled">#75777A</color>
+
+    <color name="shutter_ring">#FFFFFF</color>
+    <color name="shutter_inner_photo">#FFFFFF</color>
+    <color name="shutter_inner_photo_pressed">#D8DADC</color>
+    <color name="shutter_inner_video">#E53935</color>
+    <color name="shutter_inner_video_pressed">#C62828</color>
+</resources>

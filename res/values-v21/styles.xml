@@ -1,0 +1,27 @@
+<resources>
+    <!-- Base application theme for API 21+ with Material 3 styling -->
+    <style name="AppBaseTheme" parent="android:Theme.Material.NoActionBar.Fullscreen">
+        <item name="android:windowBackground">@color/camera_background</item>
+        <item name="android:colorPrimary">@color/m3_primary</item>
+        <item name="android:colorPrimaryDark">@color/camera_background</item>
+        <item name="android:colorAccent">@color/m3_primary</item>
+        <item name="android:textColorPrimary">@color/m3_text_high_emphasis</item>
+        <item name="android:textColorSecondary">@color/m3_text_medium_emphasis</item>
+        <item name="android:navigationBarColor">@color/camera_background</item>
+        <item name="android:statusBarColor">@color/camera_background</item>
+        <item name="android:alertDialogTheme">@style/Material3AlertDialogTheme</item>
+        <item name="android:seekBarStyle">@style/Material3SeekBar</item>
+    </style>
+
+    <style name="Material3AlertDialogTheme" parent="android:Theme.Material.Dialog.Alert">
+        <item name="android:windowBackground">@drawable/bg_dialog_material</item>
+        <item name="android:colorAccent">@color/m3_primary</item>
+        <item name="android:textColorPrimary">@color/m3_text_high_emphasis</item>
+        <item name="android:textColorSecondary">@color/m3_text_medium_emphasis</item>
+    </style>
+
+    <style name="Material3SeekBar" parent="android:Widget.Material.SeekBar">
+        <item name="android:progressDrawable">@drawable/seekbar_track</item>
+        <item name="android:thumb">@drawable/seekbar_thumb</item>
+    </style>
+</resources>

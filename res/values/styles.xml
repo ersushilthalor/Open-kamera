@@ -1,0 +1,19 @@
+<resources>
+    <!-- Base application theme -->
+    <style name="AppBaseTheme" parent="android:Theme.NoTitleBar.Fullscreen">
+        <item name="android:windowBackground">@color/camera_background</item>
+    </style>
+    
+    <!-- Application theme -->
+    <style name="AppTheme" parent="AppBaseTheme">
+    </style>
+
+    <style name="Material3AlertDialogTheme" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@drawable/bg_dialog_material</item>
+    </style>
+
+    <style name="Material3SeekBar" parent="@android:style/Widget.SeekBar">
+        <item name="android:progressDrawable">@drawable/seekbar_track</item>
+        <item name="android:thumb">@drawable/seekbar_thumb</item>
+    </style>
+</resources>

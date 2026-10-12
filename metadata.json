@@ -1,0 +1,6 @@
+{
+  "name": "Open Camera",
+  "description": "Clean, modern Material 3 camera app with full manual controls, fluid viewfinder, and sleek photography tools.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

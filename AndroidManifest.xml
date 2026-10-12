@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="net.sourceforge.opencamera"
+    android:versionCode="28"
+    android:versionName="1.24"
+    android:installLocation="auto"
+    >
+
+    <supports-screens android:xlargeScreens="true" android:largeScreens="true" android:normalScreens="true" android:smallScreens="true" android:anyDensity="true"/>
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.microphone" />
+    
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        android:largeHeap="true"
+        >
+        <activity
+            android:name="net.sourceforge.opencamera.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="sensor"
+			android:configChanges="orientation|screenSize|keyboardHidden"
+            android:exported="true"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.media.action.IMAGE_CAPTURE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.media.action.STILL_IMAGE_CAMERA" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.media.action.STILL_IMAGE_CAMERA_SECURE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="net.sourceforge.opencamera.Widgets.TakePhoto"
+            android:label="@string/take_photo"
+	        android:icon="@drawable/ic_launcher_take_photo"
+            android:screenOrientation="landscape"
+			android:configChanges="orientation|screenSize|keyboardHidden"
+			android:taskAffinity=""
+			android:excludeFromRecents="true"
+            android:exported="false"
+            >
+        </activity>
+        <receiver
+		    android:icon="@drawable/ic_launcher"
+		    android:label="@string/app_name"
+		    android:name="net.sourceforge.opencamera.Widgets.MyWidgetProvider"
+            android:exported="true" >
+		    <intent-filter >
+		         <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+		    </intent-filter>
+		    <meta-data
+		       android:name="android.appwidget.provider"
+		       android:resource="@xml/widget_info" />
+		</receiver> 
+        <receiver
+		    android:icon="@drawable/ic_launcher_take_photo"
+            android:label="@string/take_photo"
+		    android:name="net.sourceforge.opencamera.Widgets.MyWidgetProviderTakePhoto"
+            android:exported="true" >
+		    <intent-filter >
+		         <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+		    </intent-filter>
+		    <meta-data
+		       android:name="android.appwidget.provider"
+		       android:resource="@xml/widget_info_take_photo" />
+		</receiver> 
+    </application>
+</manifest>
