@@ -402,10 +402,9 @@ public class CameraController2 extends CameraController {
 			manager.openCamera(cameraIdS, myStateCallback, handler);
 		    characteristics = manager.getCameraCharacteristics(cameraIdS);
 		}
-		catch(CameraAccessException e) {
+		catch(Exception e) {
 			if( MyDebug.LOG ) {
 				Log.e(TAG, "failed to open camera");
-				Log.e(TAG, "reason: " + e.getReason());
 				Log.e(TAG, "message: " + e.getMessage());
 			}
 			e.printStackTrace();

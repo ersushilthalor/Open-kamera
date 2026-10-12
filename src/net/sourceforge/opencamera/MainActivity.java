@@ -329,8 +329,20 @@ public class MainActivity extends Activity {
 	public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
 		super.onRequestPermissionsResult(requestCode, permissions, grantResults);
 		if( requestCode == 1001 ) {
-			if( preview != null ) {
-				preview.onResume();
+			boolean granted = true;
+			for(int grantResult : grantResults) {
+				if( grantResult != android.content.pm.PackageManager.PERMISSION_GRANTED ) {
+					granted = false;
+					break;
+				}
+			}
+			if( granted ) {
+				if( preview != null ) {
+					preview.onResume();
+				}
+			}
+			else {
+				Toast.makeText(this, "Camera and Audio permissions are required.", Toast.LENGTH_LONG).show();
 			}
 		}
 	}
@@ -548,7 +560,9 @@ public class MainActivity extends Activity {
 
 		updateGalleryIcon(); // update in case images deleted whilst idle
 
-		preview.onResume();
+		if( Build.VERSION.SDK_INT < Build.VERSION_CODES.M || checkSelfPermission(android.Manifest.permission.CAMERA) == android.content.pm.PackageManager.PERMISSION_GRANTED ) {
+			preview.onResume();
+		}
 
     }
 	

@@ -931,7 +931,7 @@ public class Preview implements SurfaceHolder.Callback, TextureView.SurfaceTextu
 				camera_controller = new CameraController1(cameraId);
 			//throw new CameraControllerException(); // uncomment to test camera not opening
 		}
-		catch(CameraControllerException e) {
+		catch(Exception e) {
 			if( MyDebug.LOG )
 				Log.e(TAG, "Failed to open camera: " + e.getMessage());
 			e.printStackTrace();
